@@ -1,4 +1,4 @@
-import { Github, Bug, Heart, FileText } from "lucide-react";
+import { Github, Heart } from "lucide-react";
 
 export function Footer() {
   return (
@@ -25,7 +25,8 @@ export function Footer() {
                 <Github className="w-4 h-4" />
                 <span className="text-sm">GitHub</span>
               </a>
-              
+            </div>
+          </div>
 
           {/* Bottom line */}
           <div className="text-center pt-6 border-t border-border/30">
