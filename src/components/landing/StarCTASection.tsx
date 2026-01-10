@@ -1,9 +1,7 @@
-import { Star, Heart, Github, Users, GitFork } from "lucide-react";
+import { Star, Heart, Users, GitFork } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 export function StarCTASection() {
-  return (
-    <section className="py-24 relative overflow-hidden">
+  return <section className="py-24 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/10 to-transparent" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/20 rounded-full blur-3xl" />
@@ -55,11 +53,7 @@ export function StarCTASection() {
           </div>
 
           {/* CTA Button */}
-          <Button 
-            size="lg" 
-            className="text-xl px-10 py-8 bg-gradient-to-r from-accent to-orange-500 hover:opacity-90 transition-all pulse-glow group"
-            asChild
-          >
+          <Button size="lg" className="text-xl px-10 py-8 bg-gradient-to-r from-accent to-orange-500 hover:opacity-90 transition-all pulse-glow group" asChild>
             <a href="https://github.com/SathwikPerla/ScrollStamp/tree/v2.1-hybrid" target="_blank" rel="noopener noreferrer">
               <Star className="w-6 h-6 mr-2 group-hover:fill-current transition-all" />
               Star on GitHub
@@ -69,18 +63,12 @@ export function StarCTASection() {
 
           {/* Secondary link */}
           <div className="mt-6">
-            <a 
-              href="https://github.com/SathwikPerla/ScrollStamp/tree/v2.1-hybrid" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <Github className="w-4 h-4" />
-              <span>View on GitHub</span>
+            <a href="https://github.com/SathwikPerla/ScrollStamp/tree/v2.1-hybrid" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+              
+              
             </a>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
