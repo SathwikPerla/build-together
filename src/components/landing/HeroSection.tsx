@@ -61,7 +61,7 @@ export function HeroSection() {
               className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-blue-500 hover:opacity-90 transition-opacity glow"
               asChild
             >
-              <a href="https://github.com/SathwikPerla/ScrollStamp/tree/v2.1-hybrid" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/SathwikPerla/ScrollStamp/archive/refs/heads/v2.1-hybrid.zip" download>
                 <Download className="w-5 h-5 mr-2" />
                 Download Extension
               </a>
@@ -111,12 +111,6 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2">
-          <div className="w-1.5 h-3 bg-muted-foreground/50 rounded-full" />
-        </div>
-      </div>
     </section>
   );
 }
