@@ -25,26 +25,7 @@ export function Footer() {
                 <Github className="w-4 h-4" />
                 <span className="text-sm">GitHub</span>
               </a>
-              <a
-                href="https://github.com/SathwikPerla/ScrollStamp/tree/v2.1-hybrid/issues"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Bug className="w-4 h-4" />
-                <span className="text-sm">Issues</span>
-              </a>
-              <a
-                href="https://github.com/SathwikPerla/ScrollStamp/blob/main/LICENSE"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <FileText className="w-4 h-4" />
-                <span className="text-sm">MIT License</span>
-              </a>
-            </div>
-          </div>
+              
 
           {/* Bottom line */}
           <div className="text-center pt-6 border-t border-border/30">
