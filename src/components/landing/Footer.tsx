@@ -49,7 +49,7 @@ export function Footer() {
           {/* Bottom line */}
           <div className="text-center pt-6 border-t border-border/30">
             <p className="text-sm text-muted-foreground flex items-center justify-center gap-1">
-              Made with <Heart className="w-4 h-4 text-accent fill-accent" /> by an indie developer
+              Made with <Heart className="w-4 h-4 text-accent fill-accent" /> by Sathwik Perla
             </p>
             <p className="text-xs text-muted-foreground/60 mt-2">
               © {new Date().getFullYear()} ScrollStamp. Open source
