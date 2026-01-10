@@ -25,6 +25,13 @@ export function Footer() {
                 <Github className="w-4 h-4" />
                 <span className="text-sm">GitHub</span>
               </a>
+              <a
+                href="mailto:scrollstamp.dev@gmail.com"
+                className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                <span className="text-sm">Contact / Feedback: scrollstamp.dev@gmail.com</span>
+              </a>
             </div>
           </div>
 
