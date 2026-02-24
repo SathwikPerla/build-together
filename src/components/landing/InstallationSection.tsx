@@ -60,7 +60,7 @@ export function InstallationSection() {
             {steps.map((step, index) => (
               <div 
                 key={step.title}
-                className="glass rounded-xl p-6 flex items-start gap-4 hover:scale-[1.02] transition-transform"
+                className="glass rounded-xl p-6 flex items-start gap-4"
               >
                 {/* Step number */}
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 font-bold text-primary">

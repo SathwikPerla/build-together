@@ -48,7 +48,7 @@ export function HowItWorksSection() {
               {steps.map((step, index) => (
                 <div key={step.title} className="relative">
                   {/* Step card */}
-                  <div className="glass rounded-2xl p-8 text-center hover:scale-105 transition-transform relative z-10">
+                  <div className="glass rounded-2xl p-8 text-center relative z-10">
                     {/* Step number */}
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-background border-2 border-primary flex items-center justify-center text-sm font-bold">
                       {index + 1}

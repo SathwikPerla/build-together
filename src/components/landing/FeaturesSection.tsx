@@ -116,7 +116,7 @@ export function FeaturesSection() {
               {currentMode.features.map((feature, index) => (
                 <div 
                   key={feature.title}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-background/50 hover:bg-background/80 transition-colors"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-background/50"
                 >
                   <div className={cn(
                     "w-10 h-10 rounded-lg flex items-center justify-center shrink-0",
@@ -144,7 +144,7 @@ export function FeaturesSection() {
             {coreFeatures.map((feature) => (
               <div 
                 key={feature.title}
-                className="glass rounded-xl p-6 text-center hover:scale-105 transition-transform"
+                className="glass rounded-xl p-6 text-center"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-6 h-6 text-primary" />

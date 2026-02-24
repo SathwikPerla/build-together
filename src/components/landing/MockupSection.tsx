@@ -20,7 +20,7 @@ export function MockupSection() {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Floating Pin Button Mockup */}
-            <div className="glass rounded-2xl p-6 hover:scale-105 transition-transform">
+            <div className="glass rounded-2xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Pin className="w-5 h-5 text-accent" />
                 <h3 className="font-semibold">Floating Pin Button</h3>
@@ -58,7 +58,7 @@ export function MockupSection() {
             </div>
 
             {/* Bookmark List Mockup */}
-            <div className="glass rounded-2xl p-6 hover:scale-105 transition-transform">
+            <div className="glass rounded-2xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <List className="w-5 h-5 text-primary" />
                 <h3 className="font-semibold">Bookmark Panel</h3>
@@ -79,7 +79,7 @@ export function MockupSection() {
                     { title: "Database schema", time: "15 min ago", icon: MessageSquare },
                     { title: "Important article", time: "1 hour ago", icon: ExternalLink },
                   ].map((bookmark, i) => (
-                    <div key={i} className="flex items-center gap-2 p-2 rounded-lg hover:bg-muted/50 group cursor-pointer">
+                    <div key={i} className="flex items-center gap-2 p-2 rounded-lg">
                       <bookmark.icon className="w-4 h-4 text-muted-foreground" />
                       <div className="flex-1 min-w-0">
                         <p className="text-sm truncate">{bookmark.title}</p>
@@ -88,7 +88,7 @@ export function MockupSection() {
                           {bookmark.time}
                         </p>
                       </div>
-                      <Trash2 className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <Trash2 className="w-4 h-4 text-muted-foreground opacity-50" />
                     </div>
                   ))}
                 </div>
@@ -100,7 +100,7 @@ export function MockupSection() {
             </div>
 
             {/* Jump Back Mockup */}
-            <div className="glass rounded-2xl p-6 hover:scale-105 transition-transform">
+            <div className="glass rounded-2xl p-6">
               <div className="flex items-center gap-2 mb-4">
                 <ArrowLeft className="w-5 h-5 text-primary" />
                 <h3 className="font-semibold">Instant Jump Back</h3>
