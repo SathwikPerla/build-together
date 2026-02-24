@@ -7,12 +7,12 @@ import grokLogo from "@/assets/logos/grok.svg";
 import deepseekLogo from "@/assets/logos/deepseek.svg";
 
 const platforms = [
-  { name: "ChatGPT", logo: chatgptLogo, invert: false },
-  { name: "Claude", logo: claudeLogo, invert: false },
-  { name: "Gemini", logo: geminiLogo, invert: false },
-  { name: "Perplexity", logo: perplexityLogo, invert: true },
-  { name: "Grok", logo: grokLogo, invert: false },
-  { name: "DeepSeek", logo: deepseekLogo, invert: false },
+  { name: "ChatGPT", logo: chatgptLogo, invert: false, size: "w-12 h-12", bgClass: "" },
+  { name: "Claude", logo: claudeLogo, invert: false, size: "w-12 h-12", bgClass: "" },
+  { name: "Gemini", logo: geminiLogo, invert: false, size: "w-12 h-12", bgClass: "" },
+  { name: "Perplexity", logo: perplexityLogo, invert: true, size: "w-16 h-16", bgClass: "" },
+  { name: "Grok", logo: grokLogo, invert: false, size: "w-10 h-10 text-black", bgClass: "bg-white rounded-xl p-1" },
+  { name: "DeepSeek", logo: deepseekLogo, invert: false, size: "w-12 h-12", bgClass: "" },
 ];
 
 export function PlatformsSection() {
@@ -37,11 +37,11 @@ export function PlatformsSection() {
                 key={platform.name}
                 className="glass rounded-xl p-6 text-center hover:scale-105 transition-transform cursor-default group"
               >
-                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                <div className={`w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform ${platform.bgClass}`}>
                   <img 
                     src={platform.logo} 
                     alt={`${platform.name} logo`} 
-                    className={`w-12 h-12 object-contain ${platform.invert ? 'dark:invert' : ''}`}
+                    className={`object-contain ${platform.size} ${platform.invert ? 'dark:invert' : ''}`}
                   />
                 </div>
                 <h3 className="font-semibold">{platform.name}</h3>
