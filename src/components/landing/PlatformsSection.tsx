@@ -9,10 +9,10 @@ import deepseekLogo from "@/assets/logos/deepseek.svg";
 const platforms = [
   { name: "ChatGPT", logo: chatgptLogo, invert: false, size: "w-12 h-12", bgClass: "" },
   { name: "Claude", logo: claudeLogo, invert: false, size: "w-12 h-12", bgClass: "" },
-  { name: "Gemini", logo: geminiLogo, invert: false, size: "w-12 h-12", bgClass: "" },
+  { name: "Gemini", logo: geminiLogo, invert: false, size: "w-16 h-16", bgClass: "" },
   { name: "Perplexity", logo: perplexityLogo, invert: true, size: "w-16 h-16", bgClass: "" },
   { name: "Grok", logo: grokLogo, invert: false, size: "w-10 h-10 text-black", bgClass: "bg-white rounded-xl p-1" },
-  { name: "DeepSeek", logo: deepseekLogo, invert: false, size: "w-12 h-12", bgClass: "" },
+  { name: "DeepSeek", logo: deepseekLogo, invert: false, size: "w-16 h-16", bgClass: "" },
 ];
 
 export function PlatformsSection() {
