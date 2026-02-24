@@ -5,30 +5,36 @@ const steps = [
     icon: Scroll,
     title: "Browse & Scroll",
     description: "Read through your AI conversation or web content as usual",
+    color: "from-blue-500 to-cyan-500"
   },
   {
     icon: Pin,
     title: "Click the Pin",
     description: "Tap the floating button to bookmark the current position or message",
+    color: "from-accent to-orange-500"
   },
   {
     icon: RotateCcw,
     title: "Return Instantly",
     description: "Click any bookmark to jump right back to that exact spot",
+    color: "from-primary to-purple-500"
   },
 ];
 
 export function HowItWorksSection() {
   return (
-    <section className="py-16" id="how-it-works">
-      <div className="container px-4 mx-auto">
+    <section className="py-24 relative" id="how-it-works">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent" />
+      
+      <div className="container px-4 mx-auto relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
-              How It Works
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              How It <span className="gradient-text">Works</span>
             </h2>
-            <p className="text-base text-muted-foreground">
+            <p className="text-xl text-muted-foreground">
               Three simple steps to never lose your place again.
             </p>
           </div>
@@ -36,33 +42,38 @@ export function HowItWorksSection() {
           {/* Steps */}
           <div className="relative">
             {/* Connection line */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-px bg-border -translate-y-1/2" />
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 via-accent to-primary -translate-y-1/2" />
             
-            <div className="grid md:grid-cols-3 gap-6 relative">
+            <div className="grid md:grid-cols-3 gap-8 relative">
               {steps.map((step, index) => (
                 <div key={step.title} className="relative">
-                  <div className="bg-card border border-border rounded-lg p-6 text-center relative z-10">
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-semibold">
+                  {/* Step card */}
+                  <div className="glass rounded-2xl p-8 text-center hover:scale-105 transition-transform relative z-10">
+                    {/* Step number */}
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-background border-2 border-primary flex items-center justify-center text-sm font-bold">
                       {index + 1}
                     </div>
                     
-                    <div className="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center mx-auto mb-4 mt-2">
-                      <step.icon className="w-6 h-6 text-primary" />
+                    {/* Icon */}
+                    <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center mx-auto mb-6 mt-2`}>
+                      <step.icon className="w-10 h-10 text-white" />
                     </div>
                     
-                    <h3 className="text-base font-semibold text-foreground mb-1">{step.title}</h3>
-                    <p className="text-sm text-muted-foreground">{step.description}</p>
+                    <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                    <p className="text-muted-foreground">{step.description}</p>
                   </div>
 
+                  {/* Arrow (mobile) */}
                   {index < steps.length - 1 && (
                     <div className="flex justify-center my-4 md:hidden">
-                      <ArrowRight className="w-5 h-5 text-muted-foreground rotate-90" />
+                      <ArrowRight className="w-6 h-6 text-muted-foreground rotate-90" />
                     </div>
                   )}
                 </div>
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </section>
