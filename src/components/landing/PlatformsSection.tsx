@@ -1,18 +1,18 @@
 import { Globe, AlertTriangle, ShieldAlert } from "lucide-react";
-import chatgptLogo from "@/assets/logos/chatgpt.png";
-import claudeLogo from "@/assets/logos/claude.png";
-import geminiLogo from "@/assets/logos/gemini.png";
-import perplexityLogo from "@/assets/logos/perplexity.png";
-import grokLogo from "@/assets/logos/grok.png";
-import deepseekLogo from "@/assets/logos/deepseek.png";
+import chatgptLogo from "@/assets/logos/chatgpt.svg";
+import claudeLogo from "@/assets/logos/claude.svg";
+import geminiLogo from "@/assets/logos/gemini.svg";
+import perplexityLogo from "@/assets/logos/perplexity.svg";
+import grokLogo from "@/assets/logos/grok.svg";
+import deepseekLogo from "@/assets/logos/deepseek.svg";
 
 const platforms = [
-  { name: "ChatGPT", logo: chatgptLogo },
-  { name: "Claude", logo: claudeLogo },
-  { name: "Gemini", logo: geminiLogo },
-  { name: "Perplexity", logo: perplexityLogo },
-  { name: "Grok", logo: grokLogo },
-  { name: "DeepSeek", logo: deepseekLogo },
+  { name: "ChatGPT", logo: chatgptLogo, invert: false },
+  { name: "Claude", logo: claudeLogo, invert: false },
+  { name: "Gemini", logo: geminiLogo, invert: false },
+  { name: "Perplexity", logo: perplexityLogo, invert: true },
+  { name: "Grok", logo: grokLogo, invert: false },
+  { name: "DeepSeek", logo: deepseekLogo, invert: false },
 ];
 
 export function PlatformsSection() {
@@ -37,11 +37,11 @@ export function PlatformsSection() {
                 key={platform.name}
                 className="glass rounded-xl p-6 text-center hover:scale-105 transition-transform cursor-default group"
               >
-                <div className="w-16 h-16 rounded-2xl overflow-hidden flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
                   <img 
                     src={platform.logo} 
                     alt={`${platform.name} logo`} 
-                    className="w-16 h-16 object-cover rounded-2xl"
+                    className={`w-12 h-12 object-contain ${platform.invert ? 'dark:invert' : ''}`}
                   />
                 </div>
                 <h3 className="font-semibold">{platform.name}</h3>
