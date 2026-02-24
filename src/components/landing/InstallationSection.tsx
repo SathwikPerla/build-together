@@ -42,44 +42,41 @@ export function InstallationSection() {
   };
 
   return (
-    <section className="py-24 relative" id="install">
+    <section className="py-16" id="install">
       <div className="container px-4 mx-auto">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Easy <span className="gradient-text">Installation</span>
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+              Easy Installation
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               Get up and running in under a minute.
             </p>
           </div>
 
           {/* Steps */}
-          <div className="space-y-4 mb-12">
+          <div className="space-y-3 mb-10">
             {steps.map((step, index) => (
               <div 
                 key={step.title}
-                className="glass rounded-xl p-6 flex items-start gap-4 hover:scale-[1.02] transition-transform"
+                className="bg-card border border-border rounded-lg p-5 flex items-start gap-4"
               >
-                {/* Step number */}
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 font-bold text-primary">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-sm font-semibold text-primary">
                   {index + 1}
                 </div>
                 
-                {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center shrink-0">
-                  <step.icon className="w-6 h-6 text-primary" />
+                <div className="w-10 h-10 rounded-md bg-secondary flex items-center justify-center shrink-0">
+                  <step.icon className="w-5 h-5 text-foreground" />
                 </div>
                 
-                {/* Content */}
                 <div className="flex-1">
-                  <h3 className="font-semibold text-lg">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
+                  <h3 className="font-medium text-sm text-foreground">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground">{step.description}</p>
                   
                   {step.code && (
-                    <div className="mt-3 flex items-center gap-2">
-                      <code className="flex-1 bg-background/50 rounded-lg px-4 py-2 text-sm font-mono text-primary border border-border/50 overflow-x-auto">
+                    <div className="mt-2 flex items-center gap-2">
+                      <code className="flex-1 bg-secondary rounded-md px-3 py-2 text-sm font-mono text-foreground border border-border overflow-x-auto">
                         {step.code}
                       </code>
                       <Button 
@@ -89,7 +86,7 @@ export function InstallationSection() {
                         onClick={copyCommand}
                       >
                         {copied ? (
-                          <Check className="w-4 h-4 text-green-500" />
+                          <Check className="w-4 h-4 text-primary" />
                         ) : (
                           <Copy className="w-4 h-4" />
                         )}
@@ -98,7 +95,7 @@ export function InstallationSection() {
                   )}
                   
                   {step.highlight && (
-                    <code className="mt-2 inline-block bg-background/50 rounded px-2 py-1 text-sm font-mono text-accent border border-border/50">
+                    <code className="mt-2 inline-block bg-secondary rounded-md px-2 py-1 text-sm font-mono text-foreground border border-border">
                       {step.highlight}
                     </code>
                   )}
@@ -111,11 +108,11 @@ export function InstallationSection() {
           <div className="text-center">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-primary to-blue-500 hover:opacity-90 glow"
+              className="bg-primary text-primary-foreground hover:bg-primary/90"
               asChild
             >
               <a href="https://github.com/SathwikPerla/ScrollStamp/tree/v2.1-hybrid" target="_blank" rel="noopener noreferrer">
-                <Download className="w-5 h-5 mr-2" />
+                <Download className="w-4 h-4 mr-2" />
                 Download from GitHub
               </a>
             </Button>
