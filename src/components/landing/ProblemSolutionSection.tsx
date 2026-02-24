@@ -17,7 +17,7 @@ export function ProblemSolutionSection() {
 
           <div className="grid lg:grid-cols-2 gap-8 items-stretch">
             {/* Problem Card */}
-            <div className="glass rounded-2xl p-8 border-accent/20 hover:border-accent/40 transition-colors group">
+            <div className="glass rounded-2xl p-8 border-accent/20">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
                   <AlertCircle className="w-6 h-6 text-accent" />
@@ -86,7 +86,7 @@ export function ProblemSolutionSection() {
             </div>
 
             {/* Solution Card */}
-            <div className="glass rounded-2xl p-8 border-primary/20 hover:border-primary/40 transition-colors glow group">
+            <div className="glass rounded-2xl p-8 border-primary/20 glow">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <CheckCircle2 className="w-6 h-6 text-primary" />

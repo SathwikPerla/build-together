@@ -35,9 +35,9 @@ export function PlatformsSection() {
             {platforms.map((platform) => (
               <div 
                 key={platform.name}
-                className="glass rounded-xl p-6 text-center hover:scale-105 transition-transform cursor-default group"
+                className="glass rounded-xl p-6 text-center cursor-default"
               >
-                <div className={`w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform ${platform.bgClass}`}>
+                <div className={`w-16 h-16 flex items-center justify-center mx-auto mb-3 ${platform.bgClass}`}>
                   <img 
                     src={platform.logo} 
                     alt={`${platform.name} logo`} 

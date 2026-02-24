@@ -86,7 +86,7 @@ export function HeroSection() {
               {platforms.map((platform, index) => (
                 <div 
                   key={platform.name}
-                  className="px-4 py-2 rounded-full glass text-sm font-medium hover:scale-105 transition-transform cursor-default"
+                  className="px-4 py-2 rounded-full glass text-sm font-medium cursor-default"
                   style={{ animationDelay: `${0.5 + index * 0.1}s` }}
                 >
                   <span className={`bg-gradient-to-r ${platform.color} bg-clip-text text-transparent`}>
