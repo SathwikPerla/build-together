@@ -1,36 +1,18 @@
-import { Globe, AlertTriangle, ShieldAlert, Bot, Sparkles, Brain, Search, Zap, MessageSquare } from "lucide-react";
+import { Globe, AlertTriangle, ShieldAlert } from "lucide-react";
+import chatgptLogo from "@/assets/logos/chatgpt.png";
+import claudeLogo from "@/assets/logos/claude.png";
+import geminiLogo from "@/assets/logos/gemini.png";
+import perplexityLogo from "@/assets/logos/perplexity.png";
+import grokLogo from "@/assets/logos/grok.png";
+import deepseekLogo from "@/assets/logos/deepseek.png";
 
 const platforms = [
-  { 
-    name: "ChatGPT", 
-    icon: MessageSquare,
-    color: "from-green-400 to-emerald-600"
-  },
-  { 
-    name: "Claude", 
-    icon: Brain,
-    color: "from-orange-400 to-amber-600"
-  },
-  { 
-    name: "Gemini", 
-    icon: Sparkles,
-    color: "from-blue-400 to-indigo-600"
-  },
-  { 
-    name: "Perplexity", 
-    icon: Search,
-    color: "from-cyan-400 to-teal-600"
-  },
-  { 
-    name: "Grok", 
-    icon: Zap,
-    color: "from-purple-400 to-violet-600"
-  },
-  { 
-    name: "DeepSeek", 
-    icon: Bot,
-    color: "from-pink-400 to-rose-600"
-  },
+  { name: "ChatGPT", logo: chatgptLogo },
+  { name: "Claude", logo: claudeLogo },
+  { name: "Gemini", logo: geminiLogo },
+  { name: "Perplexity", logo: perplexityLogo },
+  { name: "Grok", logo: grokLogo },
+  { name: "DeepSeek", logo: deepseekLogo },
 ];
 
 export function PlatformsSection() {
@@ -55,8 +37,12 @@ export function PlatformsSection() {
                 key={platform.name}
                 className="glass rounded-xl p-6 text-center hover:scale-105 transition-transform cursor-default group"
               >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${platform.color} flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform shadow-lg`}>
-                  <platform.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 rounded-2xl overflow-hidden flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                  <img 
+                    src={platform.logo} 
+                    alt={`${platform.name} logo`} 
+                    className="w-16 h-16 object-cover rounded-2xl"
+                  />
                 </div>
                 <h3 className="font-semibold">{platform.name}</h3>
               </div>
